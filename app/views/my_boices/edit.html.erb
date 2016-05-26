@@ -1,6 +1,5 @@
-<h1>Editing my_boice</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @my_boice %> |
-<%= link_to 'Back', my_boices_path %>
+<%- model_class = MyBoice -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => MyBoice %></h1>
+</div>
+<%= render :partial => 'form' %>
