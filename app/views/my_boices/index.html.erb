@@ -1,0 +1,27 @@
+<h1>Listing my_boices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_boices.each do |my_boice| %>
+      <tr>
+        <td><%= my_boice.name %></td>
+        <td><%= my_boice.description %></td>
+        <td><%= link_to 'Show', my_boice %></td>
+        <td><%= link_to 'Edit', edit_my_boice_path(my_boice) %></td>
+        <td><%= link_to 'Destroy', my_boice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My boice', new_my_boice_path %>

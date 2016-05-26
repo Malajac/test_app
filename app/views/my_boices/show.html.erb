@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @my_boice.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @my_boice.description %>
+</p>
+
+<%= link_to 'Edit', edit_my_boice_path(@my_boice) %> |
+<%= link_to 'Back', my_boices_path %>
